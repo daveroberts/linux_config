@@ -77,3 +77,30 @@ gvim ~/.config/fish/config.fish
 
 `sudo apt-get install vim-gnome`
 
+# Shared drives
+
+Devices > Shared Folder Settings
+
+Be sure to check "Make Permanent"
+
+in /etc/fstab, add
+
+`M_DRIVE /media/M/ vboxsf rw 0 0`
+
+```
+cd /media
+sudo mkdir M
+sudo mount /media/M/
+```
+
+# SSH Keys
+
+```
+mkdir ~/.ssh
+cp /media/PATH_TO_SSH_KEYS/id_rsa* ~/.ssh/
+```
+
+id_rsa should be set to 600
+
+id_rsa.pub should be set to 644
+
