@@ -104,3 +104,14 @@ id_rsa should be set to 600
 
 id_rsa.pub should be set to 644
 
+# Chrome
+
+Download from website
+
+sudo dpkg -i google-chrome-stable_current_amd64.deb
+
+Will fail, to get dependencies:
+
+sudo apt-get -f install
+
+chrome should now work
